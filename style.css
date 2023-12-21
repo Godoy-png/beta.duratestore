@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  transition: background-color 0.5s ease;
+  background-color: #ffffff;
+  scroll-behavior: smooth;
+  font-family: Arial, sans-serif; /* Fonte padrão para o corpo do documento */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Pode remover essa linha para que não afete o container */
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.centered-container {
+  text-align: center;
+  padding: 20px;
+  margin-top: 0;
+  position: relative;
+}
+
+.logo {
+  width: 250px;
+  height: auto;
+}
+
+.theme-toggle {
+  width: 40px; /* Ajuste a largura conforme necessário */
+  height: auto;
+  cursor: pointer;
+  margin: 10px; /* Adiciona margem para espaço entre a imagem e a borda */
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.content {
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+}
+
+.vbucks-item {
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.vbucks-item img {
+  width: 250px; /* Ajuste a largura conforme necessário */
+  height: auto;
+}
+
+.vbucks-item:hover::before {
+  opacity: 1;
+}
+
+.vbucks-item p {
+  margin: 5px 0;
+  transition: color 0.3s ease;
+  font-family: Verdana, sans-serif; /* Usando Arial para o nome */
+  text-align: left;
+  color: #000; /* Cor padrão do texto */
+  text-decoration: none; /* Remover sublinhado */
+}
+
+.vbucks-item p:nth-child(2) {
+  color: #000000; /* Cor vermelha para o preço, ajuste conforme necessário */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Usando Verdana para o preço */
+  font-weight: bold; /* Tornando mais fina */
+  text-align: left;
+  text-decoration: none;
+  
+}
+
+.vbucks-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(84, 85, 88, 0.144); /* Cinza escuro com 70% de opacidade */
+  z-index: -1; /* Coloca a sobreposição atrás da imagem */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.vbucks-item:hover::before {
+  opacity: 1;
+}
+
+.dark-theme {
+  background-color: #111111;
+  color: #fff;
+
+  /* Altera a cor do texto de cima para branco no tema escuro */
+  .vbucks-item p {
+    color: #fff;
+  }
+}
+
+a:visited {
+  text-decoration: none;
+  text-decoration-color: transparent;
+}
+
+a:link{
+  text-decoration: none;
+}
